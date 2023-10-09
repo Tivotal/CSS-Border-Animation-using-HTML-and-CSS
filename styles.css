@@ -1,0 +1,55 @@
+/* Created by Tivotal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(4, 75, 97);
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.box::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 140%;
+  background: #fff;
+  box-shadow: 0 0 20px rgb(8, 8, 8);
+  animation: anim 4s linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box::after {
+  position: absolute;
+  content: "";
+  inset: 10px;
+  background: rgb(4, 75, 97);
+  border-radius: 10px;
+}
